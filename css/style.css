@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f9f9f9;
+  color: #1A2D4D;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1A2D4D;
+  color: #fff;
+  padding: 15px 40px;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-header nav a:hover {
+  color: #2FAE66;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #2FAE66;
+  color: #fff;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #1A2D4D;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.registration {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.registration .btn {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 12px 24px;
+  background: #1A2D4D;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.registration .btn:hover {
+  background: #2FAE66;
+}
+
+.logo {
+  height: 60px;   /* controls height */
+  width: auto;    /* keeps proportions */
+}
+
+/* Header layout */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1A2D4D;   /* navy blue */
+  color: #fff;
+  padding: 10px 40px;
+}
+
+/* Logo + brand name side by side */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+}
+
+/* Logo sizing */
+.logo {
+  height: 50px;   /* visible but not excessive */
+  width: auto;    /* keeps proportions */
+  max-width: 180px; /* prevents it from stretching too wide */
+}
+
+/* Ensure logo is visible on dark header: white background with padding */
+.site-header .logo {
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  display: block;
+}
+
+/* Brand name styling */
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 40px; /* slightly smaller on mobile */
+  }
+  .brand-name {
+    font-size: 1.2rem;
+  }
+}
+
+/* Courses grid and cards */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(26,45,77,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(26,45,77,0.12);
+}
+
+.course-card h3 {
+  margin: 0;
+  color: #1A2D4D;
+}
+.course-card p { margin: 0; color: #4a5a75; }
+
+.register-btn {
+  display: inline-block;
+  margin-top: auto;
+  align-self: start;
+  padding: 10px 16px;
+  background: #2FAE66;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.register-btn:hover { background: #26a85b; }
+
+/* Responsive adjustments for tablets and phones */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  .logo { height: 44px; }
+
+  .site-header nav { width: 100%; }
+  .site-header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 6px 0 0 0;
+  }
+
+  .page-hero { padding: 40px 16px; text-align: left; }
+
+  .highlights { flex-direction: column; padding: 20px; }
+
+  .course-grid { padding: 20px; gap: 16px; }
+  .course-card { padding: 16px; }
+
+  .registration .btn, .register-btn { width: 100%; display: inline-block; text-align: center; }
+
+  .contact-form form input, .contact-form form textarea, .contact-form form button {
+    width: 100%; box-sizing: border-box; margin-top: 8px; padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header nav ul { flex-direction: column; align-items: flex-start; }
+  .logo { height: 40px; }
+  .page-hero { padding: 28px 12px; }
+  .course-grid { grid-template-columns: 1fr; padding: 16px; }
+}
